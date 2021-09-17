@@ -44,7 +44,7 @@ namespace RAWSimO.Playground.Generators
             List<int> oStationCapacities = new List<int>
             {
                 // 6 orders in parallel
-                6,
+                10,
                 // 12 orders in parallel
                 12,
                 // 18 orders in parallel

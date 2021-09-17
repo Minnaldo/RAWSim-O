@@ -162,7 +162,7 @@
             <!-- Controls -->
             <TabControl Grid.Row="0" Grid.Column="0" TabStripPlacement="Top" Margin="2">
                 <!-- Base controls -->
-                <TabItem Name="TabBaseControls" Header="Base Controls" ToolTip="Execute showcases and single jobs">
+                <TabItem Name="TabBaseControls" Header="기본 컨트롤" ToolTip="Execute showcases and single jobs">
                     <WrapPanel Orientation="Horizontal">
                         <Button Style="{StaticResource StyleGeneralButton}"  Name="ButtonSlowDown" Click="ButtonSlowDown_Click" ToolTip="Slows down the simulation">
                             <Image Style="{StaticResource StyleButtonImage}" Name="ImageSlowDown" Source="data/rewind.png"></Image>
@@ -194,7 +194,7 @@
                     </WrapPanel>
                 </TabItem>
                 <!-- Instance generation controls -->
-                <TabItem Name="TabInstanceGeneration" Header="Instances" ToolTip="Functionality to generate instances and configurations with certain parameters">
+                <TabItem Name="TabInstanceGeneration" Header="인스턴스" ToolTip="Functionality to generate instances and configurations with certain parameters">
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal" Margin="2">
                             <Button Style="{StaticResource StyleGeneralButton}" Name="ButtonGenerateInstance" Click="ButtonGenerateInstance_Click" ToolTip="Generates a new instance with the specified parameters">
@@ -216,21 +216,21 @@
                                 <Image Style="{StaticResource StyleButtonImage}" Name="ImageSaveControlConfiguration" Source="data/disk7.png"></Image>
                             </Button>
                         </StackPanel>
-                        <GroupBox Header="Parameters">
+                        <GroupBox Header="매개변수">
                             <StackPanel Orientation="Horizontal">
-                                <GroupBox Header="Instance layout">
+                                <GroupBox Header="인스턴스 레이아웃">
                                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="600">
                                         <StackPanel Style="{StaticResource StyleConfigAutoGenStack}" Name="WrapPanelInstanceLayout">
                                         </StackPanel>
                                     </ScrollViewer>
                                 </GroupBox>
-                                <GroupBox Header="Setting configuration">
+                                <GroupBox Header="세팅 구성">
                                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="600">
                                         <StackPanel Style="{StaticResource StyleConfigAutoGenStack}" Name="WrapPanelSettingConfiguration">
                                         </StackPanel>
                                     </ScrollViewer>
                                 </GroupBox>
-                                <GroupBox Header="Controller configuration">
+                                <GroupBox Header="컨트롤러 구성">
                                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="600">
                                         <StackPanel Style="{StaticResource StyleConfigAutoGenStack}" Name="WrapPanelControlConfiguration">
                                         </StackPanel>
@@ -331,9 +331,9 @@
                     </TabControl>
                 </TabItem>
                 <!-- Settings controls -->
-                <TabItem Name="TabSettings" Header="Settings" ToolTip="All settings">
+                <TabItem Name="TabSettings" Header="세팅" ToolTip="All settings">
                     <StackPanel Orientation="Vertical">
-                        <GroupBox Header="Visuals" ToolTip="The visual settings">
+                        <GroupBox Header="비주얼" ToolTip="The visual settings">
                             <WrapPanel MaxWidth="500">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Tier (2D): " Style="{StaticResource StyleDescription}" ToolTip="The currently visualized tier (2D)"/>
@@ -382,13 +382,13 @@
                         </GroupBox>
                     </StackPanel>
                 </TabItem>
-                <TabItem Name="TabStatistics" Header="Misc" ToolTip="Miscellaneous functionality">
+                <TabItem Name="TabStatistics" Header="기타" ToolTip="Miscellaneous functionality">
                     <StackPanel Orientation="Vertical">
-                        <GroupBox Header="Statistics" ToolTip="The statistical settings">
+                        <GroupBox Header="통계" ToolTip="The statistical settings">
                             <StackPanel Orientation="Vertical" ToolTip="Specifies the statistical settings">
                                 <StackPanel Orientation="Horizontal" ToolTip="Specifies whether to output statistics">
                                     <CheckBox Style="{StaticResource StyleParameterCheckBox}" Name="CheckBoxWriteStatistics" IsChecked="False">
-                                        Write statistics to output folder after cancellation
+                                        취소 후 Output Folder에 통계 쓰기
                                     </CheckBox>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" ToolTip="Specifies where to write the statistics">
@@ -398,7 +398,7 @@
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Heatmaps" ToolTip="Tools to render heatmap based information">
+                        <GroupBox Header="히트맵" ToolTip="Tools to render heatmap based information">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Instance: -" Style="{StaticResource StyleDescription}" Name="TextBlockHeatInstance"/>
@@ -443,17 +443,17 @@
                                     </StackPanel>
                                 </GroupBox>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="Opacity: " Style="{StaticResource StyleDescription}"/>
+                                    <TextBlock Text="불투명도: " Style="{StaticResource StyleDescription}"/>
                                     <Slider x:Name="SliderHeatOpacity" Margin="2" VerticalAlignment="Center" Width="70" TickFrequency="0.05" IsSnapToTickEnabled="True" Value="0.7" Maximum="1" ValueChanged="SliderHeatOpacity_ValueChanged" />
                                     <TextBox x:Name="TextBoxHeatOpacity" Margin="2" VerticalAlignment="Center" Width="30" Text="{Binding Value, ElementName=SliderHeatOpacity, UpdateSourceTrigger=PropertyChanged}" />
                                     <CheckBox Style="{StaticResource StyleParameterCheckBox}" Name="CheckBoxHeatDrawInBackground" IsChecked="False" ToolTip="Specifies whether to draw the heatmap behind the instance visualization or in front of it">
                                         InBackground
                                     </CheckBox>
                                     <CheckBox Style="{StaticResource StyleParameterCheckBox}" Name="CheckBoxHeatTransparentCanvas" IsChecked="False" ToolTip="Specifies whether the canvas is transparent" Checked="CheckBoxHeatTransparentCanvas_Checked" Unchecked="CheckBoxHeatTransparentCanvas_Checked">
-                                        Transparent canvas
+                                        투명한 캔버스
                                     </CheckBox>
                                     <CheckBox Style="{StaticResource StyleParameterCheckBox}" Name="CheckBoxHeatBichromaticColoring" IsChecked="False" ToolTip="Specifies whether to use bichromatic coloring instead of the rainbow version">
-                                        Bichromatic coloring
+                                        두 가지의 컬러
                                     </CheckBox>
                                     <WrapPanel Style="{StaticResource StyleGeneratorElement}">
                                         <TextBlock Text="Low color: " Style="{StaticResource StyleDescription}"/>
@@ -514,17 +514,17 @@
                                 </WrapPanel>
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Flip book debugging">
+                        <GroupBox Header="플립북 디버깅">
                             <StackPanel Orientation="Vertical">
                                 <Button Style="{StaticResource StyleGeneralButton}" Name="ButtonLoadFlipBookDebuggingMaterial" Click="ButtonLoadFlipBookDebuggingMaterial_Click" ToolTip="Loads an instance with polled location data attached in order to visually debug">
                                     <Image Style="{StaticResource StyleButtonImage}" Name="ImageLoadFlipBookDebuggingMaterial" Source="data/screwdriver4.png"></Image>
                                 </Button>
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Experimental" ToolTip="Some experimental functionality">
+                        <GroupBox Header="Experimental(실험적인)" ToolTip="Some experimental functionality">
                             <WrapPanel>
                                 <WrapPanel Style="{StaticResource StyleGeneratorElement}" ToolTip="The radius for filtering the datapoints relevant for a tile in instance units">
-                                    <TextBlock Text="Onboard camera: " Style="{StaticResource StyleDescription}"/>
+                                    <TextBlock Text="온보드 카메라: " Style="{StaticResource StyleDescription}"/>
                                     <Button Style="{StaticResource StyleGeneralButton}" Name="Button3DOnboardCamera" Click="Button3DOnboardCamera_Click" ToolTip="Acivates the onboard camera for a randomly chosen bot">
                                         <Image Style="{StaticResource StyleButtonImage}" Name="Image3DOnboardCamera" Source="data/eye2.png"></Image>
                                     </Button>
@@ -533,9 +533,9 @@
                         </GroupBox>
                     </StackPanel>
                 </TabItem>
-                <TabItem Name="TabEvents" Header="Remote" ToolTip="Remote control related features">
+                <TabItem Name="TabEvents" Header="원격" ToolTip="Remote control related features">
                     <StackPanel Orientation="Vertical">
-                        <GroupBox Header="Remote connection">
+                        <GroupBox Header="원격 연결">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="IP: " Style="{StaticResource StyleDescription}"  />

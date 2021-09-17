@@ -26,6 +26,7 @@ namespace RAWSimO.Core
         /// <param name="settingConfig">The configuration for the setting to emulate.</param>
         /// <param name="controlConfig">The configuration for the controllers.</param>
         /// <returns>The newly created instance.</returns>
+        /// settingConfig 가 값이 들어오면 settingConfig /  settingConfig 가 null 이면 SettingConfiguration() 생성
         public static Instance CreateInstance(SettingConfiguration settingConfig, ControlConfiguration controlConfig)
         {
             Instance instance = new Instance()

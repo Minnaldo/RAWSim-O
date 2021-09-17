@@ -209,6 +209,10 @@ namespace RAWSimO.Core.Configurations
         /// </summary>
         Random,
         /// <summary>
+        /// Test
+        /// </summary>
+        Test,
+        /// <summary>
         /// This method uses item-frequency information to assign the pods to the positions.
         /// </summary>
         Turnover
@@ -647,6 +651,7 @@ namespace RAWSimO.Core.Configurations
     /// </summary>
     [XmlInclude(typeof(DummyPodStorageConfiguration))]
     [XmlInclude(typeof(RandomPodStorageConfiguration))]
+    [XmlInclude(typeof(TestPodStorageConfiguration))]
     [XmlInclude(typeof(NearestPodStorageConfiguration))]
     [XmlInclude(typeof(StationBasedPodStorageConfiguration))]
     [XmlInclude(typeof(CachePodStorageConfiguration))]
