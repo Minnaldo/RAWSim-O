@@ -33,7 +33,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bot.ico</ApplicationIcon>
+    <ApplicationIcon>anro.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -287,7 +287,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bot.ico" />
+    <Resource Include="anro.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="data\heatmap.png">
